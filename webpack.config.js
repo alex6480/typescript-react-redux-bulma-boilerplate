@@ -18,6 +18,14 @@ module.exports = {
     },
     plugins: [new MiniCssExtractPlugin()],
 
+    devServer: {
+        inline: false,
+        disableHostCheck: true,
+        publicPath: '/dist/',
+        historyApiFallback: true,
+        watchContentBase: true
+    },
+
     module: {
         rules: [
             // Compile typescript.

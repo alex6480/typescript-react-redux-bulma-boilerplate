@@ -34,11 +34,7 @@
                 "command": "${workspaceFolder}/node_modules/.bin/webpack.cmd"
             },
             "args": [
-                "serve",
-                "--disable-host-check",
-                "--watch-content-base",
-                "--output-public-path='http://localhost:8080/dist/'",
-                "--history-api-fallback"
+                "serve"
             ],
             "problemMatcher": []
         },
