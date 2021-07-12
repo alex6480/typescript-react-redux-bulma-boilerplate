@@ -9,6 +9,9 @@ import { IAppState } from "../reducers";
 import { Action } from "../reducers/actions/actions";
 import { AddressService } from "../services/AddressService";
 
+/*
+ * Redux mappings
+ */
 const mapState = (state: IAppState) => ({
     cityName: state.cityName
 });
@@ -17,9 +20,10 @@ const mapDispatch = {
 };
 const connector = connect(mapState, mapDispatch);
 
-type PropsFromRedux = ConnectedProps<typeof connector>
-
-interface Props extends PropsFromRedux {
+/*
+ * Custom props and state
+ */
+interface Props extends ConnectedProps<typeof connector> {
     ownProp: string,
 }
 
@@ -28,6 +32,9 @@ interface State {
     postalCode: string,
 }
 
+/*
+ * React object class
+ */
 class Dashboard extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
